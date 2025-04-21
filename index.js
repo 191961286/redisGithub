@@ -2,7 +2,7 @@ const express = require('express');
 const Redis = require('ioredis');
 
 const app = express();
-const redis = new Redis('redis://localhost:6379');
+const redis = new Redis('redis://10.8.0.3:6379');
 
 app.get('/', async (req, res) => {
   const action = req.query.action;
