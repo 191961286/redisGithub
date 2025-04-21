@@ -8,7 +8,7 @@ functions.http('helloHttp', async (req, res) => {
   const action = req.query.action;
 
   if (action === 'set') {
-    await redis.set('hello', 'world');
+    await redis.set('hello', 'world1');
     res.send('Key "hello" set to "world"');
   } else if (action === 'get') {
     const value = await redis.get('hello');
